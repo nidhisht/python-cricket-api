@@ -2,17 +2,29 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-# Get default endpoint
+# -------------------------------
+# Method:   GET
+# Action:   Default endpoint
+# Endpoint: http://127.0.0.1:5000/ 
+# -------------------------------
 @app.get("/")
 def get():
     return "Welcome to Cricket API"
 
-# Get list of teams
+# -------------------------------
+# Method:   GET
+# Action:   Retrieve list of teams
+# Endpoint: http://127.0.0.1:5000/teams 
+# -------------------------------
 @app.get("/teams")
 def get_teams():
     return {"teams": teams}
 
-# Get a team
+# -------------------------------
+# Method:   GET
+# Action:   Retrieves a team based on the provided name
+# Endpoint: http://127.0.0.1:5000/team?name=Australia
+# -------------------------------
 @app.get("/team")
 def get_team():
     name = request.args.get('name', default="India")
@@ -21,7 +33,12 @@ def get_team():
             return team,200
     return "Team not found", 404
 
-# Create new team
+# -------------------------------
+# Method:   POST
+# Action:   Create new team
+# Endpoint: http://127.0.0.1:5000/team
+# NOTE:     Sample payload to be passed as JSON body
+# -------------------------------
 @app.post("/team")
 def create_team():
     request_data = request.get_json()
