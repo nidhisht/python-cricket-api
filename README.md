@@ -1,19 +1,15 @@
 # python-cricket-api
-This is simple API that provides list of top Cricket Teams in the world
+This is a simple REST API that returns a list of top cricket teams. The data is stored in an in-memory dictionary and is not saved in any persistent datastore.
 
 ## Methods
 
-### GET - Teams
-This method returns list of teams.
-http://127.0.0.1:5000/teams
+| Method | Action | Sample endpoint |
+|----------|----------|----------|
+| GET   | Retrieve list of teams  | http://127.0.0.1:5000/teams   |
+| GET   | Retrieves a team based on the provided name   | http://127.0.0.1:5000/team?name=Australia   |
+| POST   | Create new team   | http://127.0.0.1:5000/team  |
 
-### GET - Team
-This method retrieves a team based on the provided name.
-http://127.0.0.1:5000/team?name=Australia
-
-### Post - Team
-This method creates a new team
-http://127.0.0.1:5000/team
+### Sample payload to create a new team
 
 {
     "name": "South Africa",
