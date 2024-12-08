@@ -9,7 +9,7 @@ This is a simple REST API that returns a list of top cricket teams. The data is 
 | GET   | Retrieves a team based on the provided name   | http://127.0.0.1:5000/team?name=Australia   |
 | POST   | Create new team   | http://127.0.0.1:5000/team  |
 
-### Create a new team - Sample Payload
+#### Create a new team - Sample Payload
 
 {
     "name": "South Africa",
@@ -23,5 +23,20 @@ This is a simple REST API that returns a list of top cricket teams. The data is 
     ]
 }
 
-### Create a new team - API invocation from Postman
+#### Create a new team - API invocation from Postman
 ![image](https://github.com/user-attachments/assets/bb660eb5-b516-4004-86ce-46409c7ae3f5)
+
+## How to run the API in Visual Studio Code
+#### 1. Create Virtual Environment
+Run following command:
+`python -m venv .\venv`
+
+#### 2. Install the library
+Run following command:
+`pip install requests`
+`pip install flask`
+
+#### 3. Run flask
+Run following command:
+`flask run`
+
