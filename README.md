@@ -28,15 +28,15 @@ This is a simple REST API that returns a list of top cricket teams. The data is 
 
 ## How to run the API in Visual Studio Code
 #### 1. Create Virtual Environment
-Run following command:
+Run the command:
 `python -m venv .\venv`
 
-#### 2. Install the library
-Run following command:
+#### 2. Install the libraries
+Run the commands:
 `pip install requests`
 `pip install flask`
 
 #### 3. Run flask
-Run following command:
+Run the command:
 `flask run`
 
