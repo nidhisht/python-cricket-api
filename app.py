@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -12,10 +12,20 @@ def get():
 def get_teams():
     return {"teams": teams}
 
+# Get a team
+@app.get("/team")
+def get_team():
+    name = request.args.get('name', default="India")
+    for team in teams:
+        if team["name"].lower() == name.lower():
+            return team,200
+    return "Team not found", 404
+
 # Create new team
 @app.post("/team")
 def create_team():
     request_data = request.get_json()
+    print(request_data)
     new_team = {"name": request_data["name"], "nickname": request_data["nickname"], "players": request_data["players"]}
     teams.append(new_team)
     return new_team, 201
