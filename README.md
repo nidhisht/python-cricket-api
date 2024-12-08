@@ -39,4 +39,6 @@ Run the commands:
 #### 3. Run flask
 Run the command:
 `flask run`
+![image](https://github.com/user-attachments/assets/9efc79fd-325e-46dd-9243-881f3b7945d4)
+
 
