@@ -9,7 +9,7 @@ This is a simple REST API that returns a list of top cricket teams. The data is 
 | GET   | Retrieves a team based on the provided name   | http://127.0.0.1:5000/team?name=Australia   |
 | POST   | Create new team   | http://127.0.0.1:5000/team  |
 
-### Sample payload to create a new team
+### Create a new team - Sample Payload
 
 {
     "name": "South Africa",
@@ -22,3 +22,6 @@ This is a simple REST API that returns a list of top cricket teams. The data is 
       { "name": "Heinrich Klaasen", "role": "Batsman/Wicketkeeper" }
     ]
 }
+
+### Create a new team - API invocation from Postman
+![image](https://github.com/user-attachments/assets/bb660eb5-b516-4004-86ce-46409c7ae3f5)
